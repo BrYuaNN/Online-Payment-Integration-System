@@ -1,0 +1,1127 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: Microsoft JhengHei;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  background: #2d385a;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  background: #2d385a;
+}
+
+header .serarchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .serarchContainer a {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header .serarchContainer a .logo {
+  display: block;
+  width: 60px;
+}
+
+header .serarchContainer a h1 {
+  margin: auto 10px;
+  color: #ffffff;
+}
+
+@media (max-width: 568px) {
+  header .serarchContainer a h1 {
+    display: none;
+  }
+}
+
+header .serarchContainer input {
+  border: none;
+  border-radius: 30px;
+  padding: 0 15px;
+  margin: 5px;
+  width: 300px;
+}
+
+header .serarchContainer input:focus {
+  outline: none;
+}
+
+@media (max-width: 568px) {
+  header .serarchContainer input {
+    width: 150px;
+  }
+}
+
+header .labarContainer {
+  position: absolute;
+  top: 400px;
+  right: 15px;
+  z-index: 999;
+  background: #df3314;
+  padding: 5px;
+  border: 5px solid #df3314;
+  border-radius: 30px;
+}
+
+header .labarContainer .labarValue {
+  height: 18px;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+header .labarContainer input[type="range"] {
+  -webkit-appearance: slider-vertical;
+  width: 20px;
+  margin: 0;
+  outline: none;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #df3314;
+}
+
+header .labarContainer input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: #fff;
+  height: 10px;
+}
+
+header .labarContainer input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+header .burger {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+header .burger i {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+header .burger :hover {
+  text-decoration: none;
+}
+
+header .search {
+  position: absolute;
+  left: 10px;
+  top: 70px;
+  z-index: 999;
+}
+
+header .search div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .search div a .fas {
+  font-size: 40px;
+  display: none;
+  margin: 0;
+  color: #2d385a;
+}
+
+@media (max-width: 568px) {
+  header .search div a .fas {
+    display: block;
+  }
+}
+
+header .search div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header .search div ul input {
+  cursor: pointer;
+  border-radius: 30px;
+  background: #fff;
+  border: solid 3px #2d385a;
+  font-size: 18px;
+  color: #2d385a;
+  height: 40px;
+  font-weight: bold;
+  padding: 3px 8px;
+  margin: 0 5px 5px 5px;
+}
+
+header .search div ul .store1:hover, header .search div ul .store2:hover, header .search div ul .store3:hover, header .search div ul .store4:hover, header .search div ul .store5:hover, header .search div ul .store6:hover, header .search div ul .store7:hover, header .search div ul .store8:hover, header .search div ul .store9:hover, header .search div ul .store10:hover, header .search div ul .store11:hover, header .search div ul .store12:hover, header .search div ul .pay1:hover, header .search div ul .pay2:hover, header .search div ul .pay3:hover, header .search div ul .pay4:hover, header .search div ul .pay5:hover, header .search div ul .pay6:hover, header .search div ul .pay7:hover, header .search div ul .pay8:hover, header .search div ul .pay9:hover, header .search div ul .pay10:hover, header .search div ul .pay11:hover, header .search div ul .pay12:hover {
+  background: #5d6c9b;
+  color: #fff;
+}
+
+header .search div ul .store1.active, header .search div ul .store2.active, header .search div ul .store3.active, header .search div ul .store4.active, header .search div ul .store5.active, header .search div ul .store6.active, header .search div ul .store7.active, header .search div ul .store8.active, header .search div ul .store9.active, header .search div ul .store10.active, header .search div ul .store11.active, header .search div ul .store12.active, header .search div ul .pay1.active, header .search div ul .pay2.active, header .search div ul .pay3.active, header .search div ul .pay4.active, header .search div ul .pay5.active, header .search div ul .pay6.active, header .search div ul .pay7.active, header .search div ul .pay8.active, header .search div ul .pay9.active, header .search div ul .pay10.active, header .search div ul .pay11.active, header .search div ul .pay12.active {
+  background: #5d6c9b;
+  color: #fff;
+}
+
+@media (max-width: 568px) {
+  header .search div ul {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+header .uLocate {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 580px;
+  z-index: 999;
+  background: #df3314;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+header .uLocate i {
+  color: #fff;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  header .uLocate {
+    top: 950px;
+  }
+}
+
+@media (max-width: 568px) {
+  header .uLocate {
+    top: 510px;
+  }
+}
+
+header .burgerlist {
+  display: none;
+}
+
+header .burgerlist.active {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 999;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+header .burgerlist li {
+  background: #ffffff;
+  border-bottom: 5px solid #5d6c9b;
+  border-right: 5px solid #5d6c9b;
+  border-left: 5px solid #5d6c9b;
+}
+
+header .burgerlist li a {
+  font-size: 30px;
+  padding: 10px 30px;
+  color: #2d385a;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header .burgerlist li a span {
+  margin: 0 auto;
+  text-align: center;
+}
+
+header .burgerlist li :hover {
+  background: #5d6c9b;
+}
+
+header .burgerlist li .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .burgerlist li .user img {
+  width: 50px;
+  margin: 5px auto;
+}
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
+
+.formContainer {
+  padding: 0 30%;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 568px) {
+  .formContainer {
+    padding: 0;
+  }
+}
+
+.formContainer .userForm {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 80px 25px;
+}
+
+.formContainer .userForm .logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .formContainer .userForm {
+    padding: 150px 25px;
+  }
+}
+
+@media (max-width: 568px) {
+  .formContainer .userForm {
+    padding: 40px 0;
+  }
+}
+
+.formContainer .userForm ul li {
+  margin-top: 25px;
+}
+
+.formContainer .userForm ul li h2 {
+  font-size: 50px;
+}
+
+.formContainer .userForm ul li input {
+  font-weight: bold;
+  padding: 15px 25px;
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.formContainer .userForm ul li input:focus {
+  outline: none;
+  background: rgba(247, 247, 247, 0.884);
+}
+
+@media (max-width: 568px) {
+  .formContainer .userForm ul li input {
+    padding: 15px 15px;
+  }
+}
+
+.formContainer .userForm ul li .submit {
+  background: #ffc400;
+  color: #2d385a;
+  cursor: pointer;
+}
+
+.formContainer .userForm ul li .submit:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.formContainer .userForm ul li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+
+.formContainer .userForm ul li a:hover {
+  text-decoration: underline;
+}
+
+.formContainer .registerForm {
+  padding: 40px 25px;
+}
+
+.formContainer .registerForm .logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .formContainer .registerForm {
+    padding: 150px 25px;
+  }
+}
+
+@media (max-width: 568px) {
+  .formContainer .registerForm {
+    padding: 50px 0;
+  }
+}
+
+.InfoContainer {
+  padding: 0 30%;
+}
+
+@media (max-width: 768px) {
+  .InfoContainer {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 568px) {
+  .InfoContainer {
+    padding: 0;
+  }
+}
+
+.InfoContainer .info {
+  color: #fff;
+  font-weight: bold;
+  padding: 70px 25px;
+}
+
+.InfoContainer .info .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.InfoContainer .info .logoContainer .logo {
+  margin: 0 auto 25px auto;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .InfoContainer .info {
+    padding: 150px 25px;
+  }
+}
+
+@media (max-width: 568px) {
+  .InfoContainer .info {
+    padding: 70px 0;
+  }
+}
+
+.InfoContainer .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.InfoContainer .info ul li input {
+  margin-top: 3px;
+  color: #2d385a;
+  padding: 10px 25px;
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.InfoContainer .info ul li input:focus {
+  outline: none;
+  background: rgba(247, 247, 247, 0.884);
+}
+
+.InfoContainer .info ul li span {
+  font-weight: bold;
+  color: #2d385a;
+  margin-top: 3px;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+  border: none;
+  border-radius: 30px;
+}
+
+.InfoContainer .info ul li .edit {
+  text-align: center;
+  font-weight: bold;
+  background: #ffc400;
+  color: #2d385a;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 15px 25px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+}
+
+.InfoContainer .info ul li .edit:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.InfoContainer .info ul li .modify {
+  text-align: center;
+  font-weight: bold;
+  background: #ffc400;
+  color: #2d385a;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+}
+
+.InfoContainer .info ul li .modify:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.InfoContainer .info ul li .cancel {
+  text-align: center;
+  background: #fff;
+  color: #2d385a;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 15px 25px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+}
+
+.InfoContainer .info ul li .cancel:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.InfoContainer .info ul .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.creditContainer {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px 0 0 0;
+  margin: 0 5% 0 5%;
+}
+
+@media (max-width: 768px) {
+  .creditContainer {
+    margin: 0;
+  }
+}
+
+.creditContainer .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.creditContainer .logoContainer .logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.creditContainer h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.creditContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0 auto;
+}
+
+.creditContainer ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  color: #2d385a;
+  line-height: 20px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.creditContainer ul li span {
+  margin: auto;
+}
+
+.creditContainer ul li span input {
+  margin-top: 5px;
+  background: #ffc400;
+  cursor: pointer;
+  border: none;
+  color: #2d385a;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.creditContainer ul .creditCard {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  color: #2d385a;
+  line-height: 20px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.creditContainer ul .creditCard span {
+  margin: auto;
+}
+
+.creditContainer ul .creditCard span input {
+  margin-top: 5px;
+  background: #ffc400;
+  cursor: pointer;
+  border: none;
+  color: #2d385a;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.creditContainer ul .creditCard .feedback {
+  display: none;
+}
+
+.creditContainer ul .creditCard .feedback span {
+  margin: auto;
+}
+
+.creditContainer ul .creditCard .feedback.active {
+  position: absolute;
+  left: -10px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  height: 100px;
+  background: #ffc400;
+  color: #2d385a;
+  line-height: 20px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.creditContainer ul:hover {
+  text-decoration: underline;
+}
+
+.creditContainer .bankSelect {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.creditContainer .bankSelect select {
+  text-align: center;
+  background-color: #fff;
+  color: #2d385a;
+  padding: 7px;
+  width: 150px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+}
+
+.creditContainer .bankSelect select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.creditContainer .bankSelect select option {
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.creditContainer .cardSelect form {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.creditContainer .cardSelect form select {
+  background-color: #fff;
+  color: #2d385a;
+  padding: 7px;
+  width: 300px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+.creditContainer .cardSelect form select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.creditContainer .cardSelect form select option {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.creditContainer .cardSelect form input {
+  cursor: pointer;
+  width: 100px;
+  color: #2d385a;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto 0px auto;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #ffc400;
+  font-size: 20px;
+  padding: 10px 0;
+  outline: none;
+  border: none;
+}
+
+.creditContainer .cardSelect form input:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.creditContainer .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+.creditContainer .btns a {
+  color: #2d385a;
+  display: block;
+  margin: 0 10px 0px 10px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #ffc400;
+}
+
+.creditContainer .btns a:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+@media (max-width: 568px) {
+  .creditContainer .btns a {
+    margin: 0 10px 20px 10px;
+  }
+}
+
+.payContainer {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px 0 0 0;
+  margin: 0px 5% 0 5%;
+}
+
+@media (max-width: 768px) {
+  .payContainer {
+    margin: 0;
+  }
+}
+
+.payContainer .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payContainer .logoContainer .logo {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.payContainer h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.payContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0 auto;
+}
+
+.payContainer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  color: #2d385a;
+  line-height: 30px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.payContainer ul li span {
+  margin: auto;
+}
+
+.payContainer ul li span input {
+  margin-top: 5px;
+  background: #ffc400;
+  cursor: pointer;
+  border: none;
+  color: #2d385a;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.payContainer form {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.payContainer form select {
+  background-color: #fff;
+  color: #2d385a;
+  padding: 7px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+.payContainer form select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.payContainer form select option {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.payContainer form input {
+  cursor: pointer;
+  width: 100px;
+  color: #2d385a;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto 0px auto;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #ffc400;
+  font-size: 20px;
+  padding: 10px 0;
+  outline: none;
+  border: none;
+}
+
+.payContainer form input:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+.payContainer .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+.payContainer .btns a {
+  color: #2d385a;
+  display: block;
+  margin: 0 10px 0px 10px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #ffc400;
+}
+
+.payContainer .btns a:hover {
+  background: #df3314;
+  color: #fff;
+}
+
+@media (max-width: 568px) {
+  .payContainer .btns a {
+    margin: 0 10px 20px 10px;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 91%;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 94%;
+  }
+}
+
+@media (max-width: 568px) {
+  #map {
+    height: 89%;
+  }
+}
+
+.gmnoprint, .gm-style-cc {
+  display: none;
+}
+
+.infoWindow h1 {
+  color: #2d385a;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.infoWindow h1 span {
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #424242;
+}
+
+.infoWindow li {
+  font-size: 14px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.infoWindow li i {
+  color: #ffc400;
+}
+
+.infoWindow li .fa-dollar-sign {
+  color: #000000;
+  margin-right: 5px;
+}
+
+.infoWindow li a {
+  color: #424242;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

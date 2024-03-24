@@ -1,0 +1,133 @@
+@mixin pad{
+  @media(max-width: 768px){
+	@content;
+  }
+}
+@mixin mobile{
+  @media(max-width: 568px){
+	@content;
+  }
+}
+.InfoContainer{
+  padding: 0 30%;
+  @include pad(){
+    padding: 0 10%;
+  }
+  @include mobile(){
+    padding: 0;
+  }
+  .info{
+    color: #fff;
+    font-weight: bold;
+    padding: 70px 25px;
+    .logoContainer{
+      display: flex;
+      justify-content: center;
+      .logo{
+        // margin: 0 auto;
+      margin: 0 auto 25px auto;
+
+        width: 150px;
+      }
+    }
+    // .logo{
+    //   margin: 0 auto 25px auto;
+    //   width: 150px;
+    // }
+    @include pad(){
+      padding: 150px 25px;
+    }
+    @include mobile(){
+      padding: 70px 0;
+    }
+    ul{
+      li{
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 25px;
+        padding: 0 20px;
+        input{
+          // font-weight: bold;
+          margin-top: 3px;
+          color: $blue;
+          padding: 10px 25px;
+          background: #fff;
+          border: none;
+          border-radius: 30px;
+          font-size: 20px;
+          &:focus{
+            outline: none;
+            background: rgba(247, 247, 247, 0.884);        
+          }
+        }
+        // .cantEdit{
+        //   background: $lightBlue;
+        // }
+        span{
+          font-weight: bold;
+          color: $blue;
+          margin-top: 3px;
+          padding: 10px 25px;
+          font-size: 20px;
+          font-weight: bold;
+          background: #fff;
+          border: none;
+          border-radius: 30px;
+        }
+        .edit{
+          text-align: center;
+          font-weight: bold;
+          background: $yellow;
+          color: $blue;
+          cursor: pointer;
+          font-size: 25px;
+          padding: 15px 25px;
+          margin: 0 auto;
+          border: none;
+          border-radius: 30px;
+          &:hover{
+            background: $red;
+            color: #fff;
+          }
+        }
+        .modify{
+          text-align: center;
+          font-weight: bold;
+          background: $yellow;
+          color: $blue;
+          cursor: pointer;
+          font-size: 25px;
+          padding: 10px 25px;
+          margin: 0 auto;
+          border: none;
+          border-radius: 30px;
+          &:hover{
+            background: $red;
+            color: #fff;
+          }
+        }
+        .cancel{
+          text-align: center;
+          background: #fff;
+          color: $blue;
+          cursor: pointer;
+          font-size: 25px;
+          padding: 15px 25px;
+          margin: 0 auto;
+          border: none;
+          border-radius: 30px;
+          &:hover{
+            background: $red;
+            color: #fff;
+          }
+        }
+      }
+      .btns{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

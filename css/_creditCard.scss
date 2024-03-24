@@ -1,0 +1,211 @@
+.creditContainer{
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px 0 0 0;
+  margin: 0 5% 0 5%;
+  @include pad(){
+    margin: 0;
+  }
+  .logoContainer{
+    display: flex;
+    justify-content: center;
+    .logo{
+      margin: 0 auto;
+      width: 150px;
+    }
+  }
+  h1{
+    text-align: center;
+    margin: 20px 0;
+  }
+  ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0 auto;
+    li{
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      color: $blue;
+      line-height: 20px;
+      border-radius: 15px;
+      margin: 10px;
+      span{
+        margin: auto;
+        input{
+          margin-top: 5px;
+          background: $yellow;
+          cursor: pointer;
+          border: none;
+          color: $blue;
+          font-size: 15px;
+          font-weight: bold;
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .creditCard{
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      color: $blue;
+      line-height: 20px;
+      border-radius: 15px;
+      margin: 10px;
+      span{
+        margin: auto;
+        input{
+          margin-top: 5px;
+          background: $yellow;
+          cursor: pointer;
+          border: none;
+          color: $blue;
+          font-size: 15px;
+          font-weight: bold;
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
+      }
+      .feedback{
+        display: none;
+        span{
+          margin: auto;
+        }
+        &.active{
+          position: absolute;
+          left: -10px;
+          // top: 0;
+          // display: block;
+          z-index: 999;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          width: 200px;
+          height: 100px;
+          background: $yellow;
+          color: $blue;
+          line-height: 20px;
+          border-radius: 15px;
+          margin: 10px;
+        }
+      }
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .bankSelect{
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    select{
+      text-align: center;
+      background-color: #fff;
+      color: $blue;
+      padding: 7px;
+      width: 150px;
+      border-radius: 30px;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      outline: none;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      option{
+        font-weight: bold;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .cardSelect{
+    form{
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      select{
+        background-color: #fff;
+        color: $blue;
+        padding: 7px;
+        width: 300px;
+        border-radius: 30px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        outline: none;
+        text-align: center;
+        margin: 0 auto 20px auto;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+        option{
+          text-align: center;
+          font-weight: bold;
+          border: none;
+          outline: none;
+        }
+      }
+      input{
+        cursor: pointer;
+        width: 100px;
+        color: $blue;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto 0px auto;
+        padding: 10px 25px;
+        border-radius: 30px;
+        background: $yellow;
+        font-size: 20px;
+        padding: 10px 0;
+        outline: none;
+        border: none;
+        &:hover{
+          background: $red;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .btns{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    a{
+      color: $blue;
+      display: block;
+      margin: 0 10px 0px 10px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      background: $yellow;
+      &:hover{
+        background: $red;
+        color: #fff;
+      }
+      @include mobile(){
+        margin: 0 10px 20px 10px;
+      }
+    }
+    
+  }
+}

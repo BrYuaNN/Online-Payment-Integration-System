@@ -1,0 +1,229 @@
+@mixin pad{
+  @media(max-width: 768px){
+	@content;
+  }
+}
+@mixin mobile{
+  @media(max-width: 568px){
+	@content;
+  }
+}
+html, body{
+  background: $blue;
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  background: $blue;
+  .serarchContainer{
+    display: flex;
+    a{
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      font-size: 40px;
+      font-weight: bold;
+      .logo{
+        display: block;
+        width: 60px;
+      }
+      h1{
+        margin: auto 10px;
+        color: #ffffff;
+        @include mobile(){
+          display: none;
+        }
+      }
+    }
+    input{
+      border: none;
+      border-radius: 30px;
+      padding: 0 15px;
+      margin: 5px;
+      width: 300px;
+      &:focus{
+        outline: none;
+      }
+      @include mobile(){
+        width: 150px;
+      }
+      
+    }
+  }
+  // input[type="range"] {
+  //   // -webkit-appearance: none;
+  //   // height: 100px;
+  //   // width: 200px;
+  //   position: absolute;
+  //   top: 130px;
+  //   z-index: 999;
+  //   background: none; // 清除不必要的東西
+  //   outline: none; // 清除不必要的東西
+  //   border-radius: 0; // 清除不必要的東西
+  //   overflow: hidden; // 晚點會用到
+  //   cursor: pointer;
+  //   color: $red;
+  //   // &::-webkit-slider-runnable-track {
+  //   //   // background-color: #ddd;
+  //   // }
+  //   // // 是能調整拖曳鈕的朋友
+  //   // &::-webkit-slider-thumb {
+  //   //   // -webkit-appearance: none; // 一樣要消除
+  //   //   // width: 20px;
+  //   //   // height: 10px;
+  //   //   // border-radius: 20px;
+  //   //   // background-color: $red;
+  //   //   // border: 2px solid #999;
+  //   // }
+  // }
+  // .laBarOutput{
+  //   z-index: 999;
+  //   position: absolute;
+  //   top: 150px;
+  //   width: 20px;
+  //   display: block;
+  // }
+  
+  .burger{
+    cursor: pointer;
+    padding: 5px 10px;
+    i{
+      font-size: 40px;
+      color: #ffffff;
+    }
+    :hover{
+      text-decoration: none;
+    }
+  }
+  .search{
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    z-index: 999;
+    div{
+      display: flex;
+      .fas{
+        font-size: 40px;
+        display: none;
+        margin: 0;
+        i{
+          color: $blue;
+        }
+        @include mobile(){
+          display: block;
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction: row;
+        input{
+          cursor: pointer;
+          border-radius: 30px;
+          background: #fff;
+          border: solid 3px $blue;
+          font-size: 18px;
+          color: $blue;
+          height: 40px;
+          font-weight: bold;
+          padding: 3px 8px;
+          margin: 0 5px 5px 5px;
+          
+        }
+        
+        .store1, .store2, .store3, .store4, .store5, .store6, .store7, .store8, .store9, .store10, .store11, .pay1, .pay2, .pay3, .pay4, .pay5, .pay6, .pay7, .pay8, .pay9, .pay10, .pay11, .pay12{
+          &:hover{
+            background: $lightBlue;
+            color: #fff;
+          }
+          &.active{
+            background: $lightBlue;
+            color: #fff;
+          }
+        }
+        
+        
+        @include mobile(){
+          width: 250px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  
+  .uLocate{
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 580px;
+    z-index: 999;
+    background: $red;
+    border-radius: 50px;
+    padding: 5px;
+    i{
+      color: #fff;
+      font-size: 40px;
+
+    }
+    @include pad(){
+      top: 950px;
+    }
+    @include mobile(){
+      top: 510px;
+    }
+  }
+  .burgerlist{
+    display: none;
+    &.active{
+      position: absolute;
+      right: 0;
+      top: 60px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      transition: all 0.8s;
+    }
+    li{
+      background: #ffffff;
+      border-bottom: 5px solid $lightBlue;
+      border-right: 5px solid $lightBlue;
+      border-left: 5px solid $lightBlue;
+      a{
+        font-size: 30px;
+        padding: 10px 30px;
+        color: $blue;       
+        font-weight: bold;
+        display: flex;
+        text-align: center;
+        span{
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+      :hover{
+        background: $lightBlue;
+      }
+      .user{
+        display: flex;
+        flex-direction: column;
+        img{
+          width: 50px;
+          margin: 5px auto;
+        }
+      }
+    }
+  }
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
+*{
+  outline: #02ee3d 1px solid;
+}
